@@ -1,0 +1,43 @@
+# Site settings
+title: Bautista Anglers
+email: youremail@blank.com
+icon:
+url: yoururl
+description: This is a jekyll theme utilizing Bootstrap.  It was created with a simple businesses in mind, but could be used for any number of things
+keywords:
+  - Simple Business
+  - Jekyll
+  - Bootstrap
+  - Theme
+
+fonts:
+  special: Lobster Two
+  heading: Cabin
+  content:
+
+collections:
+  images:
+  services:
+    output: false
+  locations:
+  photosections:
+
+# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+social:
+  - title: instagram
+    url: https://www.instagram.com/bautistaanglers/
+  - title: facebook
+    url:
+
+# Footer settings
+footer:
+  copyright: Gregory Ball
+  location: Contact Details
+  social: Around the Web
+  credits: Credits
+
+color:
+  menu-primary: 305F67
+  menu-secondary: 00797C
+  page-primary: 26454c
+  page-secondary: white
