@@ -48,6 +48,15 @@ section.photocontent {
     margin: 0;
 }
 
+.picture-content-item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.picture-content-img {
+    max-height: 400px;
+}
+
 .photocontent-photo{
     padding: 0;
     margin: 0;
@@ -153,9 +162,12 @@ button.book-button {
     display:inline-block;
 }
 
-popover {
-    position:relative;
-    display:inline-block;
+.popover-title {
+    font-weight: bold;
+}
+
+.popover-content {
+    font-size: 1em;
 }
 
 .allContentHeader {
