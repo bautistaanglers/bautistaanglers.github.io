@@ -5,17 +5,25 @@
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
                         <ol class="carousel-indicators">
-                            {% for image in site.images %}
-                            <li data-target="#myCarousel" data-slide-to="0"{% if image == site.images.first %}class="active">{% endif %}</li>
+                            {% assign index = -1 %}
+                            {% for image in site.static_files %}
+                            {% if image.path contains 'img/header' %}
+                            <li data-target="#myCarousel" data-slide-to="{% increment index %}" class="{% if index == 0 %}active{% else %}{% endif %}"></li>
+                            {% endif %}
                             {% endfor %}
                         </ol>
 
                     <!-- Wrapper for slides -->
                     <div class="carousel-inner" role="listbox">
-                        {% for image in site.images %}
-                            <div class="item{% if image == site.images.first %} active{% endif %}">
-                                <img style="background-image: url('{{image.src}}');" class="image-background 100vh" longdesc="{{image.description}}">
+                        {% assign set_active = false %}
+                        {% for image in site.static_files %}
+                        {% if image.path contains 'img/header' %}
+                            <div class="item{% if set_active == false %} active{% endif %}">
+                                {% assign set_active = true %}
+                                <img style="background-image: url('{{ site.baseurl }}{{ image.path }}');" class="image-background 100vh"
+                                     longdesc="{{ image.path | remove: "/img/photo_gallery/" | remove: ".jpg" | remove: ".png" }}">
                             </div>
+                        {% endif %}
                         {% endfor %}
                     </div>
 

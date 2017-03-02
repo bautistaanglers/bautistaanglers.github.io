@@ -83,6 +83,19 @@ $(function() {
     });
 });
 
+$(document).ready(function() {
+    $('carousel').carousel({
+        pause: 'false'
+    });
+
+    var screenHeight = $(window).height();
+    var options = {};
+    options.maxHeight = 2 * screenHeight / 3;
+    $('.pgwSlideshow').pgwSlideshow( options );
+
+    $('[data-toggle="popover"]').popover();
+});
+
 $(document).on('pageinit', function(event){
     $("#myCarousel").swiperight(function() {
         $("#myCarousel").carousel('prev');
@@ -90,10 +103,6 @@ $(document).on('pageinit', function(event){
     $("#myCarousel").swipeleft(function() {
         $("#myCarousel").carousel('next');
     });
-});
-
-$(document).ready(function(){
-    $('[data-toggle="popover"]').popover();
 });
 
 var animatedNavbar = (function() {
