@@ -9,7 +9,12 @@
 .pgwSlideshow {
     width: 100%;
     background: #333;
+    padding: 0;
     display: none;
+}
+
+ul{
+    padding: 0;
 }
 
 .pgwSlideshow a{

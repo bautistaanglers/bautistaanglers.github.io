@@ -98,7 +98,7 @@
             if (typeof pgwSlideshow.plugin.find('.ps-current').animate == 'function') {
                 pgwSlideshow.plugin.find('.ps-current').stop().animate({
                     height: height
-                }, pgwSlideshow.config.adaptiveDuration,  'easeInOutBack', function() {
+                }, pgwSlideshow.config.adaptiveDuration,  'easeInOutCubic', function() {
                     if (pgwSlideshow.config.maxHeight) {
                         pgwSlideshow.plugin.find('.ps-current > ul > li img').css('max-height', height + 'px');
                     }
@@ -413,7 +413,7 @@
 
                 currentElement.css('position', 'absolute').animate({
                     opacity : 0,
-                }, pgwSlideshow.config.transitionDuration,  'easeInOutBack', function() {
+                }, pgwSlideshow.config.transitionDuration,  'easeInOutCubic', function() {
                     currentElement.css('position', '').css('z-index', 1).hide();
                 });
             }
@@ -439,7 +439,7 @@
 
             nextElement.css('position', 'absolute').show().animate({
                 opacity : 1,
-            }, pgwSlideshow.config.transitionDuration,  'easeInOutBack', function() {
+            }, pgwSlideshow.config.transitionDuration,  'easeInOutCubic', function() {
                 nextElement.css('position', '').css('z-index', 2).css('display', 'block');
                 finishElement(element);
             });
@@ -497,7 +497,7 @@
 
                 currentElement.css('position', 'absolute').animate({
                     left : elementDest,
-                }, pgwSlideshow.config.transitionDuration, 'easeInOutBack', function() {
+                }, pgwSlideshow.config.transitionDuration, 'easeInOutCubic', function() {
                     currentElement.css('position', '').css('z-index', 1).css('left', '').css('opacity', 0).hide();
                 });
 
@@ -515,7 +515,7 @@
 
                 nextElement.css('position', 'absolute').css('left', nextOrigin).css('opacity', 1).show().animate({
                     left : 0,
-                }, pgwSlideshow.config.transitionDuration,  'easeInOutBack', function() {
+                }, pgwSlideshow.config.transitionDuration,  'easeInOutCubic', function() {
                     nextElement.css('position', '').css('left', '').css('z-index', 2).show();
                     pgwSlideshow.transitionInProgress = false;
                     finishElement(element);
@@ -644,7 +644,7 @@
                     if (typeof listObject.animate == 'function') {
                         listObject.animate({
                             left: newPosition
-                        },  'easeInOutBack', pgwSlideshow.config.transitionDuration);
+                        },  'easeInOutCubic', pgwSlideshow.config.transitionDuration);
                     } else {
                         listObject.css('left', newPosition);
                     }
