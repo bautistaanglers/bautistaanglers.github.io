@@ -2,7 +2,8 @@
 title: Bautista Anglers
 email: bautistaanglers@gmail.com
 icon:
-url: bautistaanglers.com
+url: https://bautistaanglers.com
+enforce_ssl: bautistaanglers.com
 description: Bautista Anglers is a family-owned charter business out of Channel Islands Harbor in Oxnard, California.  We provide many services to several locations at a very good price.
 about: Bautista Anglers is a family-owned business that wants to make the joy of fishing, available to all.  We have been fishing and navigating these waters for over 30 years, and want the opportunity to share our experience with you.
                            Whether you are looking to fish, go on a private whale watching tour, or simply check out the islands;
@@ -43,22 +44,6 @@ fonts:
   special: Lobster Two
   heading: Cabin
   content:
-
-images:
-  - title: Dolphin
-    src: img/header/dolphin.jpg
-  - title: Island 1
-    src: img/header/island_1.jpg
-  - title: Island 2
-    src: img/header/island_2.jpg
-  - title: Island 3
-    src: img/header/island_3.jpg
-  - title: The boat at sunset
-    src: img/header/the_boat_at_sunset.jpg
-  - title: The Fish
-    src: img/header/the_fish.jpg
-  - title: Channel Islands Harbor
-    src: img/header/the_harbor.jpg
 
 collections:
   services:
