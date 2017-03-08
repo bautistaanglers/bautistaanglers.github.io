@@ -10,7 +10,7 @@
     <meta name="description" content="{{ site.description }}">
     <meta name="keywords" content="{% for keyword in site.keywords %}{{ keyword }}{% if keyword != site.keywords.last %},{% endif %}{% endfor %}">
     {% if site.meta_author %}<meta name="author" content="{{ site.meta_author }}">{% endif %}
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+    <link rel="canonical" href="{{site.url}}{{page.url}}">
     <link rel="alternate" type="application/rss+xml" title="RSS" href="/feed.xml">
     <link rel="icon" href="{{site.icon}}">
     <!-- Custom CSS & Bootstrap Core CSS -->
